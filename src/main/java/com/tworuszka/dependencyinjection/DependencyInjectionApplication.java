@@ -4,7 +4,6 @@ import com.tworuszka.dependencyinjection.controllers.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class DependencyInjectionApplication {
@@ -12,6 +11,7 @@ public class DependencyInjectionApplication {
 	public static void main(String[] args) {
 		ApplicationContext context = SpringApplication.run(DependencyInjectionApplication.class, args);
 
+		System.out.println("------- Profile");
 		I18nController i18nController = context.getBean(I18nController.class);
 		System.out.println(i18nController.sayHello());
 
